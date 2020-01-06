@@ -4,8 +4,6 @@ import "./App.css";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 
-const idArtist = 27;
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -15,6 +13,11 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    var idArtist = "27";
+    var path = document.location.pathname.substr(1);
+    if (path.length > 0 && !isNaN(path)) {
+      idArtist = path;
+    }
     axios
       .get("https://api.deezer.com/artist/" + idArtist)
       .then(response => this.setState({ data: response.data }));
