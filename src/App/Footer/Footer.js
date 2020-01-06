@@ -6,7 +6,7 @@ class Footer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: {}
+      data: null
     };
   }
 
@@ -25,7 +25,17 @@ class Footer extends React.Component {
           className="Footer-Deezer-logo"
           alt="Deezer logo"
         />
-        <span className="Footer-title">Deezer info :</span>
+        <div className="Footer-text">
+          <span>Deezer info : </span>
+          {this.state.data ? (
+            <span>
+              {this.state.data.name} / {this.state.data.nb_album} albums /{" "}
+              {this.state.data.nb_fan} Fans
+            </span>
+          ) : (
+            undefined
+          )}
+        </div>
       </div>
     );
   }
