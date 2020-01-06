@@ -4,7 +4,12 @@ import "./Footer.css";
 function Footer() {
   return (
     <div className="Footer">
-      <span className="Footer-title">Goodbye !</span>
+      <img
+        src="assets/deezer_logo.jpg"
+        className="Footer-Deezer-logo"
+        alt="Deezer logo"
+      />
+      <span className="Footer-title">Deezer info :</span>
     </div>
   );
 }
