@@ -32,14 +32,16 @@ class App extends React.Component {
   }
 
   search(text) {
-    axios.get("https://api.deezer.com/search?q=" + text).then(response => {
-      var results = response.data.data;
-      if (!results || results.length === 0) {
-        alert("No result for search!");
-      } else {
-        this.loadArtist(results[0].artist.id);
-      }
-    });
+    axios
+      .get('https://api.deezer.com/search?q=artist:"' + text + '"')
+      .then(response => {
+        var results = response.data.data;
+        if (!results || results.length === 0) {
+          alert("No result for search!");
+        } else {
+          this.loadArtist(results[0].artist.id);
+        }
+      });
   }
 
   render() {
