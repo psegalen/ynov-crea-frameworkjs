@@ -18,7 +18,7 @@ function App() {
           Learn React
         </a>
       </div>
-      <Footer />
+      <Footer idArtist="100" />
     </div>
   );
 }

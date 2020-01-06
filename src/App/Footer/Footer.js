@@ -11,9 +11,8 @@ class Footer extends React.Component {
   }
 
   componentDidMount() {
-    // TODO : fetch Deezer data and store it in the state
     axios
-      .get("https://api.deezer.com/artist/27")
+      .get("https://api.deezer.com/artist/" + this.props.idArtist)
       .then(response => this.setState({ data: response.data }));
   }
 
