@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
+import List from "./List/List";
 
 class App extends React.Component {
   constructor(props) {
@@ -27,17 +28,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header data={this.state.data} />
-        <div className="App-header">
-          <p>Hello Ynov !</p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </div>
+        <List idArtist={this.state.data ? this.state.data.id : null} />
         <Footer data={this.state.data} />
       </div>
     );

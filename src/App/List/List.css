@@ -1,0 +1,24 @@
+.List {
+  flex: 1;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ListItem {
+  margin: 8px;
+  padding: 8px;
+  width: calc(25% - 16px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ListItem-cover {
+  height: 200px;
+}
+
+.ListItem-title {
+  color: grey;
+}
